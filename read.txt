@@ -1,0 +1,20 @@
+
+https://docs.google.com/document/d/1tJ13PMwLALE8K5pHNEruUekhA7kPwDaKLTnLc0FoHPg/edit#
+
+https://github.com/GoogleCloudPlatform/java-docs-samples/blob/master/cloud-sql/mysql/servlet/src/main/webapp/WEB-INF/appengine-web.xml
+
+Used the HikariConfig to create a connection to pool to connect to Cloud SQL
+Configured connection name,db name, user name and password as env variables in Cloud function
+
+1) Build a Uber jar
+2) Enabled Cloud SQl Admin API
+3) Provided connect name in the format project_id:region:sql-instance-name
+
+Step 2 :
+
+Enabled the private IP access in Cloud SQL
+Created the server-less VPC (Connector) to enable cloud function to connect to Cloud SQL over private IP.
+Added Project viewer and compute network user roles for GCF default service account.
+
+
+https://www.techgig.com/challenge/GCP-I?sourcetype=priority&utm_source=TG_batch&utm_medium=email&utm_campaign=internal_challenge_2020-05-17&&auto_login=bzkyb3k0UDlRdG45WE4xZHZLQllqOGI4WVJPNUlMbkhCUVFMK3ZzU3I0cjYyN2NpRzdhTm9ieUNNb1htQWxtZjJEU2FBVnc0OHR6VlA1OVkzYjkzSEE9PQ==&etoken=bzkyb3k0UDlRdG45WE4xZHZLQllqeGdEb21ieWVYYlA3djJ3ZGRZVllKOD0=&activity_name=NjI1ODA1&template_type=0&link_src=VWZEQ0NwOTYrOGc2NHQvcHFaK3Qzdz09&src_type=autoLogin
